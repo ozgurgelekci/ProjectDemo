@@ -4,17 +4,17 @@ using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using Demo.Core.Entities.Abstract;
+using Demo.Data.Context;
 using Demo.Data.GenericRepository.Abstract;
 
 namespace Demo.Data.GenericRepository.Concrete
 {
-    public class GenericRepository<TEntity, TContext> : IGenericRepository<TEntity> where TEntity : class, IEntity
-    where TContext : DbContext, new()
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class, IEntity
     {
-        private readonly TContext _context;
+        private readonly DemoContext _context;
         private readonly DbSet<TEntity> _dbSet;
 
-        public GenericRepository(TContext context)
+        public GenericRepository(DemoContext context)
         {
             _context = context;
             _dbSet = context.Set<TEntity>();
