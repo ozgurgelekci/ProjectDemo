@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using Demo.Core.Entities.Abstract;
-using Demo.Data.Context;
 using Demo.Data.GenericRepository.Abstract;
 
 namespace Demo.Data.GenericRepository.Concrete
