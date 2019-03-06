@@ -50,9 +50,13 @@
   <ItemGroup>
     <Compile Include="Context\CommonContext.cs" />
     <Compile Include="Context\DemoContext.cs" />
+    <Compile Include="GenericRawSql\Abstract\IGenericRawSql.cs" />
+    <Compile Include="GenericRawSql\Concrete\GenericRawSql.cs" />
     <Compile Include="GenericRepository\Abstract\IGenericRepository.cs" />
     <Compile Include="GenericRepository\Concrete\GenericRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitOfWork\Abstract\IUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\Concrete\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
