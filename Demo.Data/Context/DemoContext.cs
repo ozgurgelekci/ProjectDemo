@@ -10,6 +10,9 @@ namespace Demo.Data.Context
 {
     public class DemoContext : DbContext
     {
+        private readonly DemoContext _context;
+        private DbContextTransaction _transaction;
+
         public DemoContext()
         : base("name=DemoEntities")
         {
@@ -82,5 +85,21 @@ namespace Demo.Data.Context
 
             base.OnModelCreating(modelBuilder);
         }
+
+        public void BeginTransaction()
+        {
+            _transaction = _context.Database.BeginTransaction();
+        }
+
+        public void Commit()
+        {
+            _transaction.Commit();
+        }
+
+        public void RoolBack()
+        {
+            _transaction.Rollback();
+        }
     }
+
 }
