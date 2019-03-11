@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Demo.Core.Entities.Enums
+﻿namespace Demo.Core.Entities.Enums
 {
     public struct UnitTypes
     {

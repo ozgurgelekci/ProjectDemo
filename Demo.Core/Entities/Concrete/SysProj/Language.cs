@@ -8,7 +8,7 @@ namespace Demo.Core.Entities.Concrete.SysProj
         [Key]
         public byte Id { get; set; }
         [StringLength(10)]
-        public byte Culture { get; set; }
+        public string Culture { get; set; }
         [StringLength(10)]
         public byte UiCulture { get; set; }
         [StringLength(50)]
