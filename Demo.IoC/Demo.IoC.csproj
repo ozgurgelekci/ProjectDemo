@@ -68,6 +68,10 @@
       <Project>{0D6F0C39-3078-4B14-9849-2CE873BA8A7F}</Project>
       <Name>Demo.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Demo.Service\Demo.Service.csproj">
+      <Project>{9CB8FF5D-BC94-4BEA-A9B9-DA507214695E}</Project>
+      <Name>Demo.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

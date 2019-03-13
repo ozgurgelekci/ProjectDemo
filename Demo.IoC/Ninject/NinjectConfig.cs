@@ -8,6 +8,8 @@ using Demo.Data.GenericRepository.Abstract;
 using Demo.Data.GenericRepository.Concrete;
 using Demo.Data.UnitOfWork.Abstract;
 using Demo.Data.UnitOfWork.Concrete;
+using Demo.Service.Abstract;
+using Demo.Service.Concrete;
 using Ninject;
 
 namespace Demo.IoC.Ninject
@@ -44,6 +46,12 @@ namespace Demo.IoC.Ninject
             kernel.Bind<IGenericRepository<LookupList>>().To<GenericRepository<LookupList>>();
             kernel.Bind<IGenericRepository<Parameter>>().To<GenericRepository<Parameter>>();
             kernel.Bind<IGenericRepository<Resource>>().To<GenericRepository<Resource>>();
+
+            //Services
+            kernel.Bind<IAccessService>().To<AccessService>();
+            kernel.Bind<ICommonService>().To<CommonService>();
+            kernel.Bind<ILogService>().To<LogService>();
+            kernel.Bind<ISysprojService>().To<SysprojService>();
 
             return kernel;
         }
